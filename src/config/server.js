@@ -11,7 +11,7 @@ server.use(allowCors)
 const PORT = LOCAL_PORT || process.env.PORT
 
 server.listen(PORT, function() {
-  console.log(`Server is running on port ${port}.`)
+  console.log(`Server is running on port ${PORT}.`)
 })
 
 module.exports = server

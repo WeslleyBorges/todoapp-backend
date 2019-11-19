@@ -10,7 +10,7 @@ server.use(allowCors)
 
 const PORT = LOCAL_PORT || process.env.PORT
 
-server.listen(PORT, function() {
+server.listen(PORT, '0.0.0.0', function() {
   console.log(`Server is running on port ${PORT}.`)
 })
 

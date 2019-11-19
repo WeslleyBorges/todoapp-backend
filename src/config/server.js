@@ -8,7 +8,7 @@ server.use(bodyParser.urlencoded({ extended: true }))
 server.use(bodyParser.json())
 server.use(allowCors)
 
-const PORT = LOCAL_PORT || process.env.PORT
+const PORT = process.env.PORT || LOCAL_PORT
 
 server.listen(PORT, '0.0.0.0', function() {
   console.log(`Server is running on port ${PORT}.`)

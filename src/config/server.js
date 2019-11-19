@@ -1,4 +1,4 @@
-const port = 3003
+const LOCAL_PORT = 3003
 const bodyParser = require('body-parser')
 const express = require('express')
 const server = express()
@@ -8,7 +8,9 @@ server.use(bodyParser.urlencoded({ extended: true }))
 server.use(bodyParser.json())
 server.use(allowCors)
 
-server.listen(port, function() {
+const PORT = LOCAL_PORT || process.env.PORT
+
+server.listen(PORT, function() {
   console.log(`Server is running on port ${port}.`)
 })
 
